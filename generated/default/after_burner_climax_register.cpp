@@ -356,7 +356,6 @@ void after_burner_climax_RegisterFunctions(rex::runtime::IModuleRegistrar* regis
   registrar->SetFunction(0x8213CB18, sub_8213CB18);
   registrar->SetFunction(0x8213CB28, sub_8213CB28);
   registrar->SetFunction(0x8213CC08, sub_8213CC08);
-  registrar->SetFunction(0x8213CC44, sub_8213CC44);
   registrar->SetFunction(0x8213D0C8, sub_8213D0C8);
   registrar->SetFunction(0x8213D140, sub_8213D140);
   registrar->SetFunction(0x8213D238, sub_8213D238);
@@ -380,9 +379,7 @@ void after_burner_climax_RegisterFunctions(rex::runtime::IModuleRegistrar* regis
   registrar->SetFunction(0x8213E0D8, sub_8213E0D8);
   registrar->SetFunction(0x8213E4C8, sub_8213E4C8);
   registrar->SetFunction(0x8213E538, sub_8213E538);
-  registrar->SetFunction(0x8213E560, sub_8213E560);
   registrar->SetFunction(0x8213E608, sub_8213E608);
-  registrar->SetFunction(0x8213E658, sub_8213E658);
   registrar->SetFunction(0x8213E730, sub_8213E730);
   registrar->SetFunction(0x8213E770, sub_8213E770);
   registrar->SetFunction(0x8213E7B0, sub_8213E7B0);
@@ -485,7 +482,6 @@ void after_burner_climax_RegisterFunctions(rex::runtime::IModuleRegistrar* regis
   registrar->SetFunction(0x82143868, sub_82143868);
   registrar->SetFunction(0x82143998, sub_82143998);
   registrar->SetFunction(0x82143A08, sub_82143A08);
-  registrar->SetFunction(0x82143A40, sub_82143A40);
   registrar->SetFunction(0x82143EC8, sub_82143EC8);
   registrar->SetFunction(0x821440D0, sub_821440D0);
   registrar->SetFunction(0x821440D8, sub_821440D8);
@@ -540,7 +536,6 @@ void after_burner_climax_RegisterFunctions(rex::runtime::IModuleRegistrar* regis
   registrar->SetFunction(0x82146870, sub_82146870);
   registrar->SetFunction(0x821468A0, sub_821468A0);
   registrar->SetFunction(0x821469E0, sub_821469E0);
-  registrar->SetFunction(0x82146A2C, sub_82146A2C);
   registrar->SetFunction(0x82147318, sub_82147318);
   registrar->SetFunction(0x82147568, sub_82147568);
   registrar->SetFunction(0x82147580, sub_82147580);
@@ -652,7 +647,6 @@ void after_burner_climax_RegisterFunctions(rex::runtime::IModuleRegistrar* regis
   registrar->SetFunction(0x8214BFB8, sub_8214BFB8);
   registrar->SetFunction(0x8214C060, sub_8214C060);
   registrar->SetFunction(0x8214C0E0, sub_8214C0E0);
-  registrar->SetFunction(0x8214C124, sub_8214C124);
   registrar->SetFunction(0x8214C580, sub_8214C580);
   registrar->SetFunction(0x8214C768, sub_8214C768);
   registrar->SetFunction(0x8214C840, sub_8214C840);
@@ -802,7 +796,6 @@ void after_burner_climax_RegisterFunctions(rex::runtime::IModuleRegistrar* regis
   registrar->SetFunction(0x821521E0, sub_821521E0);
   registrar->SetFunction(0x82152250, sub_82152250);
   registrar->SetFunction(0x821522B8, sub_821522B8);
-  registrar->SetFunction(0x821522F8, sub_821522F8);
   registrar->SetFunction(0x821528F0, sub_821528F0);
   registrar->SetFunction(0x82152940, sub_82152940);
   registrar->SetFunction(0x82152AD0, sub_82152AD0);
@@ -815,7 +808,6 @@ void after_burner_climax_RegisterFunctions(rex::runtime::IModuleRegistrar* regis
   registrar->SetFunction(0x82153370, sub_82153370);
   registrar->SetFunction(0x821533C0, sub_821533C0);
   registrar->SetFunction(0x821534A8, sub_821534A8);
-  registrar->SetFunction(0x821535A0, sub_821535A0);
   registrar->SetFunction(0x82154BA8, sub_82154BA8);
   registrar->SetFunction(0x82154C48, sub_82154C48);
   registrar->SetFunction(0x82154D38, sub_82154D38);
@@ -862,8 +854,6 @@ void after_burner_climax_RegisterFunctions(rex::runtime::IModuleRegistrar* regis
   registrar->SetFunction(0x821579D0, sub_821579D0);
   registrar->SetFunction(0x82157A60, sub_82157A60);
   registrar->SetFunction(0x82157C50, sub_82157C50);
-  registrar->SetFunction(0x82157CB8, sub_82157CB8);
-  registrar->SetFunction(0x82157FF0, sub_82157FF0);
   registrar->SetFunction(0x82158390, sub_82158390);
   registrar->SetFunction(0x821583E0, sub_821583E0);
   registrar->SetFunction(0x821583F8, sub_821583F8);
@@ -1115,7 +1105,6 @@ void after_burner_climax_RegisterFunctions(rex::runtime::IModuleRegistrar* regis
   registrar->SetFunction(0x82163090, sub_82163090);
   registrar->SetFunction(0x821631F8, sub_821631F8);
   registrar->SetFunction(0x82163370, sub_82163370);
-  registrar->SetFunction(0x82163390, sub_82163390);
   registrar->SetFunction(0x82163400, sub_82163400);
   registrar->SetFunction(0x821634E0, sub_821634E0);
   registrar->SetFunction(0x821635B0, sub_821635B0);
@@ -1217,7 +1206,6 @@ void after_burner_climax_RegisterFunctions(rex::runtime::IModuleRegistrar* regis
   registrar->SetFunction(0x82168698, sub_82168698);
   registrar->SetFunction(0x82168828, sub_82168828);
   registrar->SetFunction(0x82168920, sub_82168920);
-  registrar->SetFunction(0x82168948, sub_82168948);
   registrar->SetFunction(0x82168A98, sub_82168A98);
   registrar->SetFunction(0x82168AF8, sub_82168AF8);
   registrar->SetFunction(0x82168B18, sub_82168B18);
@@ -1316,7 +1304,6 @@ void after_burner_climax_RegisterFunctions(rex::runtime::IModuleRegistrar* regis
   registrar->SetFunction(0x8216CB10, sub_8216CB10);
   registrar->SetFunction(0x8216CC50, sub_8216CC50);
   registrar->SetFunction(0x8216CED8, sub_8216CED8);
-  registrar->SetFunction(0x8216CF8C, sub_8216CF8C);
   registrar->SetFunction(0x8216D1E8, sub_8216D1E8);
   registrar->SetFunction(0x8216D228, sub_8216D228);
   registrar->SetFunction(0x8216D268, sub_8216D268);
@@ -1381,8 +1368,6 @@ void after_burner_climax_RegisterFunctions(rex::runtime::IModuleRegistrar* regis
   registrar->SetFunction(0x82171790, sub_82171790);
   registrar->SetFunction(0x82171A58, sub_82171A58);
   registrar->SetFunction(0x82171C20, sub_82171C20);
-  registrar->SetFunction(0x82171FF8, sub_82171FF8);
-  registrar->SetFunction(0x821720A8, sub_821720A8);
   registrar->SetFunction(0x821729D8, sub_821729D8);
   registrar->SetFunction(0x82172A80, sub_82172A80);
   registrar->SetFunction(0x82172B00, sub_82172B00);
@@ -1609,7 +1594,6 @@ void after_burner_climax_RegisterFunctions(rex::runtime::IModuleRegistrar* regis
   registrar->SetFunction(0x8217F400, sub_8217F400);
   registrar->SetFunction(0x8217F588, sub_8217F588);
   registrar->SetFunction(0x8217F678, sub_8217F678);
-  registrar->SetFunction(0x8217F6D8, sub_8217F6D8);
   registrar->SetFunction(0x8217F7A0, sub_8217F7A0);
   registrar->SetFunction(0x8217F888, sub_8217F888);
   registrar->SetFunction(0x8217F8F0, sub_8217F8F0);
@@ -1619,7 +1603,6 @@ void after_burner_climax_RegisterFunctions(rex::runtime::IModuleRegistrar* regis
   registrar->SetFunction(0x821804B8, sub_821804B8);
   registrar->SetFunction(0x82180528, sub_82180528);
   registrar->SetFunction(0x82180968, sub_82180968);
-  registrar->SetFunction(0x82180A4C, sub_82180A4C);
   registrar->SetFunction(0x82180E48, sub_82180E48);
   registrar->SetFunction(0x82180EA0, sub_82180EA0);
   registrar->SetFunction(0x82180F70, sub_82180F70);
@@ -1651,12 +1634,10 @@ void after_burner_climax_RegisterFunctions(rex::runtime::IModuleRegistrar* regis
   registrar->SetFunction(0x82182400, sub_82182400);
   registrar->SetFunction(0x82182688, sub_82182688);
   registrar->SetFunction(0x821827B0, sub_821827B0);
-  registrar->SetFunction(0x82182808, sub_82182808);
   registrar->SetFunction(0x821829A0, sub_821829A0);
   registrar->SetFunction(0x82182E90, sub_82182E90);
   registrar->SetFunction(0x82183580, sub_82183580);
   registrar->SetFunction(0x82183788, sub_82183788);
-  registrar->SetFunction(0x82183940, sub_82183940);
   registrar->SetFunction(0x82183CD8, sub_82183CD8);
   registrar->SetFunction(0x82183D28, sub_82183D28);
   registrar->SetFunction(0x821840C0, sub_821840C0);
@@ -1825,7 +1806,6 @@ void after_burner_climax_RegisterFunctions(rex::runtime::IModuleRegistrar* regis
   registrar->SetFunction(0x8218DED0, sub_8218DED0);
   registrar->SetFunction(0x8218DF20, sub_8218DF20);
   registrar->SetFunction(0x8218E1A8, sub_8218E1A8);
-  registrar->SetFunction(0x8218E20C, sub_8218E20C);
   registrar->SetFunction(0x8218E680, sub_8218E680);
   registrar->SetFunction(0x8218EEA8, sub_8218EEA8);
   registrar->SetFunction(0x8218F0A8, sub_8218F0A8);
@@ -1840,7 +1820,6 @@ void after_burner_climax_RegisterFunctions(rex::runtime::IModuleRegistrar* regis
   registrar->SetFunction(0x82192308, sub_82192308);
   registrar->SetFunction(0x821923C8, sub_821923C8);
   registrar->SetFunction(0x82192500, sub_82192500);
-  registrar->SetFunction(0x82192580, sub_82192580);
   registrar->SetFunction(0x82192668, sub_82192668);
   registrar->SetFunction(0x82192768, sub_82192768);
   registrar->SetFunction(0x821928C0, sub_821928C0);
@@ -1848,19 +1827,15 @@ void after_burner_climax_RegisterFunctions(rex::runtime::IModuleRegistrar* regis
   registrar->SetFunction(0x82192B08, sub_82192B08);
   registrar->SetFunction(0x82192CD8, sub_82192CD8);
   registrar->SetFunction(0x821930D8, sub_821930D8);
-  registrar->SetFunction(0x821931C4, sub_821931C4);
   registrar->SetFunction(0x82193800, sub_82193800);
   registrar->SetFunction(0x82194560, sub_82194560);
   registrar->SetFunction(0x82194748, sub_82194748);
-  registrar->SetFunction(0x821947E0, sub_821947E0);
   registrar->SetFunction(0x82194870, sub_82194870);
-  registrar->SetFunction(0x82194990, sub_82194990);
   registrar->SetFunction(0x82194B90, sub_82194B90);
   registrar->SetFunction(0x82194D30, sub_82194D30);
   registrar->SetFunction(0x82194D38, sub_82194D38);
   registrar->SetFunction(0x82195130, sub_82195130);
   registrar->SetFunction(0x821954A0, sub_821954A0);
-  registrar->SetFunction(0x82195628, sub_82195628);
   registrar->SetFunction(0x82195778, sub_82195778);
   registrar->SetFunction(0x821958A8, sub_821958A8);
   registrar->SetFunction(0x82195A10, sub_82195A10);
@@ -2180,7 +2155,6 @@ void after_burner_climax_RegisterFunctions(rex::runtime::IModuleRegistrar* regis
   registrar->SetFunction(0x821B2830, sub_821B2830);
   registrar->SetFunction(0x821B2838, sub_821B2838);
   registrar->SetFunction(0x821B2858, sub_821B2858);
-  registrar->SetFunction(0x821B2884, sub_821B2884);
   registrar->SetFunction(0x821B2CD8, sub_821B2CD8);
   registrar->SetFunction(0x821B2E60, sub_821B2E60);
   registrar->SetFunction(0x821B2E90, sub_821B2E90);
@@ -2323,12 +2297,9 @@ void after_burner_climax_RegisterFunctions(rex::runtime::IModuleRegistrar* regis
   registrar->SetFunction(0x821BACF0, sub_821BACF0);
   registrar->SetFunction(0x821BAE90, sub_821BAE90);
   registrar->SetFunction(0x821BB010, sub_821BB010);
-  registrar->SetFunction(0x821BB1E8, sub_821BB1E8);
   registrar->SetFunction(0x821BB5D8, sub_821BB5D8);
   registrar->SetFunction(0x821BBAB8, sub_821BBAB8);
-  registrar->SetFunction(0x821BBC54, sub_821BBC54);
   registrar->SetFunction(0x821BBED0, sub_821BBED0);
-  registrar->SetFunction(0x821BC01C, sub_821BC01C);
   registrar->SetFunction(0x821BC2C0, sub_821BC2C0);
   registrar->SetFunction(0x821BC510, sub_821BC510);
   registrar->SetFunction(0x821BD340, sub_821BD340);
@@ -2348,7 +2319,6 @@ void after_burner_climax_RegisterFunctions(rex::runtime::IModuleRegistrar* regis
   registrar->SetFunction(0x821BE8D8, sub_821BE8D8);
   registrar->SetFunction(0x821BEBD0, sub_821BEBD0);
   registrar->SetFunction(0x821BEDE8, sub_821BEDE8);
-  registrar->SetFunction(0x821BF258, sub_821BF258);
   registrar->SetFunction(0x821BF390, sub_821BF390);
   registrar->SetFunction(0x821BF830, sub_821BF830);
   registrar->SetFunction(0x821BF8E0, sub_821BF8E0);
@@ -2366,7 +2336,6 @@ void after_burner_climax_RegisterFunctions(rex::runtime::IModuleRegistrar* regis
   registrar->SetFunction(0x821C1828, sub_821C1828);
   registrar->SetFunction(0x821C1AD8, sub_821C1AD8);
   registrar->SetFunction(0x821C1B60, sub_821C1B60);
-  registrar->SetFunction(0x821C1C2C, sub_821C1C2C);
   registrar->SetFunction(0x821C1F38, sub_821C1F38);
   registrar->SetFunction(0x821C2090, sub_821C2090);
   registrar->SetFunction(0x821C2450, sub_821C2450);
@@ -2432,7 +2401,6 @@ void after_burner_climax_RegisterFunctions(rex::runtime::IModuleRegistrar* regis
   registrar->SetFunction(0x821C5EB0, sub_821C5EB0);
   registrar->SetFunction(0x821C5F70, sub_821C5F70);
   registrar->SetFunction(0x821C6190, sub_821C6190);
-  registrar->SetFunction(0x821C637C, sub_821C637C);
   registrar->SetFunction(0x821C6760, sub_821C6760);
   registrar->SetFunction(0x821C6938, sub_821C6938);
   registrar->SetFunction(0x821C6BF0, sub_821C6BF0);
@@ -2441,7 +2409,6 @@ void after_burner_climax_RegisterFunctions(rex::runtime::IModuleRegistrar* regis
   registrar->SetFunction(0x821C7218, sub_821C7218);
   registrar->SetFunction(0x821C74C0, sub_821C74C0);
   registrar->SetFunction(0x821C7520, sub_821C7520);
-  registrar->SetFunction(0x821C7620, sub_821C7620);
   registrar->SetFunction(0x821C7C10, sub_821C7C10);
   registrar->SetFunction(0x821C7C48, sub_821C7C48);
   registrar->SetFunction(0x821C7D28, sub_821C7D28);
@@ -2504,10 +2471,8 @@ void after_burner_climax_RegisterFunctions(rex::runtime::IModuleRegistrar* regis
   registrar->SetFunction(0x821CBA68, sub_821CBA68);
   registrar->SetFunction(0x821CBA90, sub_821CBA90);
   registrar->SetFunction(0x821CBB18, sub_821CBB18);
-  registrar->SetFunction(0x821CBBE4, sub_821CBBE4);
   registrar->SetFunction(0x821CBFF8, sub_821CBFF8);
   registrar->SetFunction(0x821CC058, sub_821CC058);
-  registrar->SetFunction(0x821CC0BC, sub_821CC0BC);
   registrar->SetFunction(0x821CC550, sub_821CC550);
   registrar->SetFunction(0x821CC574, sub_821CC574);
   registrar->SetFunction(0x821CC578, sub_821CC578);
@@ -2517,7 +2482,6 @@ void after_burner_climax_RegisterFunctions(rex::runtime::IModuleRegistrar* regis
   registrar->SetFunction(0x821CCB38, sub_821CCB38);
   registrar->SetFunction(0x821CCE68, sub_821CCE68);
   registrar->SetFunction(0x821CD180, sub_821CD180);
-  registrar->SetFunction(0x821CD2F8, sub_821CD2F8);
   registrar->SetFunction(0x821CDA68, sub_821CDA68);
   registrar->SetFunction(0x821CDC60, sub_821CDC60);
   registrar->SetFunction(0x821CDC88, sub_821CDC88);
@@ -2593,7 +2557,6 @@ void after_burner_climax_RegisterFunctions(rex::runtime::IModuleRegistrar* regis
   registrar->SetFunction(0x821D2CF0, sub_821D2CF0);
   registrar->SetFunction(0x821D2DD0, sub_821D2DD0);
   registrar->SetFunction(0x821D3030, sub_821D3030);
-  registrar->SetFunction(0x821D3080, sub_821D3080);
   registrar->SetFunction(0x821D3518, sub_821D3518);
   registrar->SetFunction(0x821D35D0, sub_821D35D0);
   registrar->SetFunction(0x821D3668, sub_821D3668);
@@ -2697,7 +2660,6 @@ void after_burner_climax_RegisterFunctions(rex::runtime::IModuleRegistrar* regis
   registrar->SetFunction(0x821D8E48, sub_821D8E48);
   registrar->SetFunction(0x821D8E78, sub_821D8E78);
   registrar->SetFunction(0x821D8EE0, sub_821D8EE0);
-  registrar->SetFunction(0x821D92D8, sub_821D92D8);
   registrar->SetFunction(0x821D9590, sub_821D9590);
   registrar->SetFunction(0x821D9690, sub_821D9690);
   registrar->SetFunction(0x821D98B8, sub_821D98B8);
@@ -2753,7 +2715,6 @@ void after_burner_climax_RegisterFunctions(rex::runtime::IModuleRegistrar* regis
   registrar->SetFunction(0x821DCE48, sub_821DCE48);
   registrar->SetFunction(0x821DD160, sub_821DD160);
   registrar->SetFunction(0x821DD298, sub_821DD298);
-  registrar->SetFunction(0x821DD36C, sub_821DD36C);
   registrar->SetFunction(0x821DD440, sub_821DD440);
   registrar->SetFunction(0x821DD508, sub_821DD508);
   registrar->SetFunction(0x821DD548, sub_821DD548);
@@ -2763,7 +2724,6 @@ void after_burner_climax_RegisterFunctions(rex::runtime::IModuleRegistrar* regis
   registrar->SetFunction(0x821DD670, sub_821DD670);
   registrar->SetFunction(0x821DD740, sub_821DD740);
   registrar->SetFunction(0x821DD790, sub_821DD790);
-  registrar->SetFunction(0x821DD7E0, sub_821DD7E0);
   registrar->SetFunction(0x821DD8C8, sub_821DD8C8);
   registrar->SetFunction(0x821DD918, sub_821DD918);
   registrar->SetFunction(0x821DD968, sub_821DD968);
@@ -3017,7 +2977,6 @@ void after_burner_climax_RegisterFunctions(rex::runtime::IModuleRegistrar* regis
   registrar->SetFunction(0x821E94D8, sub_821E94D8);
   registrar->SetFunction(0x821E9770, sub_821E9770);
   registrar->SetFunction(0x821E9868, sub_821E9868);
-  registrar->SetFunction(0x821E9A24, sub_821E9A24);
   registrar->SetFunction(0x821E9CB0, sub_821E9CB0);
   registrar->SetFunction(0x821E9CF8, sub_821E9CF8);
   registrar->SetFunction(0x821E9D08, sub_821E9D08);
@@ -3091,7 +3050,6 @@ void after_burner_climax_RegisterFunctions(rex::runtime::IModuleRegistrar* regis
   registrar->SetFunction(0x821EE408, sub_821EE408);
   registrar->SetFunction(0x821EE508, sub_821EE508);
   registrar->SetFunction(0x821EE5F8, sub_821EE5F8);
-  registrar->SetFunction(0x821EE648, sub_821EE648);
   registrar->SetFunction(0x821EEAD8, sub_821EEAD8);
   registrar->SetFunction(0x821EEC60, sub_821EEC60);
   registrar->SetFunction(0x821EECB8, sub_821EECB8);
@@ -3129,11 +3087,9 @@ void after_burner_climax_RegisterFunctions(rex::runtime::IModuleRegistrar* regis
   registrar->SetFunction(0x821EF830, sub_821EF830);
   registrar->SetFunction(0x821EFA50, sub_821EFA50);
   registrar->SetFunction(0x821EFC40, sub_821EFC40);
-  registrar->SetFunction(0x821EFD94, sub_821EFD94);
   registrar->SetFunction(0x821F0D70, sub_821F0D70);
   registrar->SetFunction(0x821F0E30, sub_821F0E30);
   registrar->SetFunction(0x821F0ED8, sub_821F0ED8);
-  registrar->SetFunction(0x821F0F2C, sub_821F0F2C);
   registrar->SetFunction(0x821F14D8, sub_821F14D8);
   registrar->SetFunction(0x821F18E8, sub_821F18E8);
   registrar->SetFunction(0x821F1BC8, sub_821F1BC8);
@@ -3212,7 +3168,6 @@ void after_burner_climax_RegisterFunctions(rex::runtime::IModuleRegistrar* regis
   registrar->SetFunction(0x821F6640, sub_821F6640);
   registrar->SetFunction(0x821F6838, sub_821F6838);
   registrar->SetFunction(0x821F6B10, sub_821F6B10);
-  registrar->SetFunction(0x821F6BA4, sub_821F6BA4);
   registrar->SetFunction(0x821F7240, sub_821F7240);
   registrar->SetFunction(0x821F7548, sub_821F7548);
   registrar->SetFunction(0x821F7740, sub_821F7740);
@@ -3286,7 +3241,6 @@ void after_burner_climax_RegisterFunctions(rex::runtime::IModuleRegistrar* regis
   registrar->SetFunction(0x821FA728, sub_821FA728);
   registrar->SetFunction(0x821FA7B0, sub_821FA7B0);
   registrar->SetFunction(0x821FA908, sub_821FA908);
-  registrar->SetFunction(0x821FA998, sub_821FA998);
   registrar->SetFunction(0x821FAD28, sub_821FAD28);
   registrar->SetFunction(0x821FADF0, sub_821FADF0);
   registrar->SetFunction(0x821FAF58, sub_821FAF58);
@@ -3390,7 +3344,6 @@ void after_burner_climax_RegisterFunctions(rex::runtime::IModuleRegistrar* regis
   registrar->SetFunction(0x82204278, sub_82204278);
   registrar->SetFunction(0x82204608, sub_82204608);
   registrar->SetFunction(0x82204C18, sub_82204C18);
-  registrar->SetFunction(0x82204C6C, sub_82204C6C);
   registrar->SetFunction(0x82204FC8, sub_82204FC8);
   registrar->SetFunction(0x822050D8, sub_822050D8);
   registrar->SetFunction(0x822052D8, sub_822052D8);
@@ -3403,7 +3356,6 @@ void after_burner_climax_RegisterFunctions(rex::runtime::IModuleRegistrar* regis
   registrar->SetFunction(0x82205D88, sub_82205D88);
   registrar->SetFunction(0x82206570, sub_82206570);
   registrar->SetFunction(0x82206CC0, sub_82206CC0);
-  registrar->SetFunction(0x82206D64, sub_82206D64);
   registrar->SetFunction(0x82206EC0, sub_82206EC0);
   registrar->SetFunction(0x82207290, sub_82207290);
   registrar->SetFunction(0x822072E8, sub_822072E8);
@@ -3430,7 +3382,6 @@ void after_burner_climax_RegisterFunctions(rex::runtime::IModuleRegistrar* regis
   registrar->SetFunction(0x82207D30, sub_82207D30);
   registrar->SetFunction(0x82207EE0, sub_82207EE0);
   registrar->SetFunction(0x82207F88, sub_82207F88);
-  registrar->SetFunction(0x8220822C, sub_8220822C);
   registrar->SetFunction(0x82208388, sub_82208388);
   registrar->SetFunction(0x822083F0, sub_822083F0);
   registrar->SetFunction(0x82208688, sub_82208688);
@@ -3502,7 +3453,6 @@ void after_burner_climax_RegisterFunctions(rex::runtime::IModuleRegistrar* regis
   registrar->SetFunction(0x8220B8A8, sub_8220B8A8);
   registrar->SetFunction(0x8220BA60, sub_8220BA60);
   registrar->SetFunction(0x8220BBC8, sub_8220BBC8);
-  registrar->SetFunction(0x8220BC10, sub_8220BC10);
   registrar->SetFunction(0x8220BF50, sub_8220BF50);
   registrar->SetFunction(0x8220C7F8, sub_8220C7F8);
   registrar->SetFunction(0x8220C890, sub_8220C890);
@@ -3522,7 +3472,6 @@ void after_burner_climax_RegisterFunctions(rex::runtime::IModuleRegistrar* regis
   registrar->SetFunction(0x8220D1F8, sub_8220D1F8);
   registrar->SetFunction(0x8220D360, sub_8220D360);
   registrar->SetFunction(0x8220D518, sub_8220D518);
-  registrar->SetFunction(0x8220D5A8, sub_8220D5A8);
   registrar->SetFunction(0x8220D950, sub_8220D950);
   registrar->SetFunction(0x8220D990, sub_8220D990);
   registrar->SetFunction(0x8220DA00, sub_8220DA00);
@@ -3531,7 +3480,6 @@ void after_burner_climax_RegisterFunctions(rex::runtime::IModuleRegistrar* regis
   registrar->SetFunction(0x8220DBA8, sub_8220DBA8);
   registrar->SetFunction(0x8220DC00, sub_8220DC00);
   registrar->SetFunction(0x8220DC60, sub_8220DC60);
-  registrar->SetFunction(0x8220DD9C, sub_8220DD9C);
   registrar->SetFunction(0x8220E210, sub_8220E210);
   registrar->SetFunction(0x8220E290, sub_8220E290);
   registrar->SetFunction(0x8220E4B8, sub_8220E4B8);
@@ -3541,7 +3489,6 @@ void after_burner_climax_RegisterFunctions(rex::runtime::IModuleRegistrar* regis
   registrar->SetFunction(0x8220F0E0, sub_8220F0E0);
   registrar->SetFunction(0x8220F528, sub_8220F528);
   registrar->SetFunction(0x8220F668, sub_8220F668);
-  registrar->SetFunction(0x8220F6F8, sub_8220F6F8);
   registrar->SetFunction(0x8220FC10, sub_8220FC10);
   registrar->SetFunction(0x8220FCE0, sub_8220FCE0);
   registrar->SetFunction(0x8220FDB0, sub_8220FDB0);
@@ -3561,7 +3508,6 @@ void after_burner_climax_RegisterFunctions(rex::runtime::IModuleRegistrar* regis
   registrar->SetFunction(0x822110C8, sub_822110C8);
   registrar->SetFunction(0x82211678, sub_82211678);
   registrar->SetFunction(0x82211AC8, sub_82211AC8);
-  registrar->SetFunction(0x82211B18, sub_82211B18);
   registrar->SetFunction(0x82211F48, sub_82211F48);
   registrar->SetFunction(0x822123F8, sub_822123F8);
   registrar->SetFunction(0x82212748, sub_82212748);
@@ -3619,7 +3565,6 @@ void after_burner_climax_RegisterFunctions(rex::runtime::IModuleRegistrar* regis
   registrar->SetFunction(0x82214970, sub_82214970);
   registrar->SetFunction(0x822149E8, sub_822149E8);
   registrar->SetFunction(0x82214AD8, sub_82214AD8);
-  registrar->SetFunction(0x82214B34, sub_82214B34);
   registrar->SetFunction(0x82214C50, sub_82214C50);
   registrar->SetFunction(0x82214CD0, sub_82214CD0);
   registrar->SetFunction(0x82214D90, sub_82214D90);
@@ -4254,7 +4199,6 @@ void after_burner_climax_RegisterFunctions(rex::runtime::IModuleRegistrar* regis
   registrar->SetFunction(0x822396F0, sub_822396F0);
   registrar->SetFunction(0x822397B8, sub_822397B8);
   registrar->SetFunction(0x822398A0, sub_822398A0);
-  registrar->SetFunction(0x82239A90, sub_82239A90);
   registrar->SetFunction(0x82239C78, sub_82239C78);
   registrar->SetFunction(0x82239DC0, sub_82239DC0);
   registrar->SetFunction(0x82239EF0, sub_82239EF0);
@@ -4268,7 +4212,6 @@ void after_burner_climax_RegisterFunctions(rex::runtime::IModuleRegistrar* regis
   registrar->SetFunction(0x8223A5B8, sub_8223A5B8);
   registrar->SetFunction(0x8223A618, sub_8223A618);
   registrar->SetFunction(0x8223A6A8, sub_8223A6A8);
-  registrar->SetFunction(0x8223A744, sub_8223A744);
   registrar->SetFunction(0x8223A9D0, sub_8223A9D0);
   registrar->SetFunction(0x8223AEC8, sub_8223AEC8);
   registrar->SetFunction(0x8223AF18, sub_8223AF18);
@@ -9661,7 +9604,6 @@ void after_burner_climax_RegisterFunctions(rex::runtime::IModuleRegistrar* regis
   registrar->SetFunction(0x82452058, sub_82452058);
   registrar->SetFunction(0x824521F8, sub_824521F8);
   registrar->SetFunction(0x824525A0, sub_824525A0);
-  registrar->SetFunction(0x8245263C, sub_8245263C);
   registrar->SetFunction(0x82452E60, sub_82452E60);
   registrar->SetFunction(0x82452EB0, sub_82452EB0);
   registrar->SetFunction(0x82452F08, sub_82452F08);
@@ -10012,9 +9954,7 @@ void after_burner_climax_RegisterFunctions(rex::runtime::IModuleRegistrar* regis
   registrar->SetFunction(0x8246E8A0, sub_8246E8A0);
   registrar->SetFunction(0x8246EBE0, sub_8246EBE0);
   registrar->SetFunction(0x8246F7B0, sub_8246F7B0);
-  registrar->SetFunction(0x8246F85C, sub_8246F85C);
   registrar->SetFunction(0x8246FDA8, sub_8246FDA8);
-  registrar->SetFunction(0x8246FE2C, sub_8246FE2C);
   registrar->SetFunction(0x82471148, sub_82471148);
   registrar->SetFunction(0x82471988, sub_82471988);
   registrar->SetFunction(0x82471E28, sub_82471E28);
@@ -10055,7 +9995,6 @@ void after_burner_climax_RegisterFunctions(rex::runtime::IModuleRegistrar* regis
   registrar->SetFunction(0x824762F0, sub_824762F0);
   registrar->SetFunction(0x82476460, sub_82476460);
   registrar->SetFunction(0x82476538, sub_82476538);
-  registrar->SetFunction(0x824765D8, sub_824765D8);
   registrar->SetFunction(0x82476AC0, sub_82476AC0);
   registrar->SetFunction(0x82476BC0, sub_82476BC0);
   registrar->SetFunction(0x82476BE8, sub_82476BE8);
@@ -10263,7 +10202,6 @@ void after_burner_climax_RegisterFunctions(rex::runtime::IModuleRegistrar* regis
   registrar->SetFunction(0x82486930, sub_82486930);
   registrar->SetFunction(0x82486A68, sub_82486A68);
   registrar->SetFunction(0x82486BB8, sub_82486BB8);
-  registrar->SetFunction(0x82486D78, sub_82486D78);
   registrar->SetFunction(0x82488418, sub_82488418);
   registrar->SetFunction(0x824884B0, sub_824884B0);
   registrar->SetFunction(0x82488570, sub_82488570);
@@ -10789,7 +10727,6 @@ void after_burner_climax_RegisterFunctions(rex::runtime::IModuleRegistrar* regis
   registrar->SetFunction(0x824A1C10, sub_824A1C10);
   registrar->SetFunction(0x824A1C90, sub_824A1C90);
   registrar->SetFunction(0x824A1D20, sub_824A1D20);
-  registrar->SetFunction(0x824A1DB4, sub_824A1DB4);
   registrar->SetFunction(0x824A2060, sub_824A2060);
   registrar->SetFunction(0x824A20C8, sub_824A20C8);
   registrar->SetFunction(0x824A2118, sub_824A2118);
