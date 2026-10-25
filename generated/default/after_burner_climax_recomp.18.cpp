@@ -25199,9 +25199,74 @@ loc_823616E8:
 	goto loc_823616DC;
 }
 
-DEFINE_REX_FUNC(sub_82361764) {
+DEFINE_REX_FUNC(sub_823616F0) {
 	REX_FUNC_PROLOGUE();
 	PPCRegister temp{};
+	// lwz r11,0(r3)
+	ctx.r11.u64 = REX_LOAD_U32(ctx.r3.u32 + 0);
+	// li r8,0
+	ctx.r8.s64 = 0;
+	// lwz r9,0(r4)
+	ctx.r9.u64 = REX_LOAD_U32(ctx.r4.u32 + 0);
+	// lwz r11,32(r11)
+	ctx.r11.u64 = REX_LOAD_U32(ctx.r11.u32 + 32);
+	// b 0x82361720
+	goto loc_82361720;
+loc_82361704:
+	// lwz r10,0(r11)
+	ctx.r10.u64 = REX_LOAD_U32(ctx.r11.u32 + 0);
+	// lwz r10,0(r10)
+	ctx.r10.u64 = REX_LOAD_U32(ctx.r10.u32 + 0);
+	// rlwinm r10,r10,19,16,31
+	ctx.r10.u64 = __builtin_rotateleft64(ctx.r10.u32 | (ctx.r10.u64 << 32), 19) & 0xFFFF;
+	// cmplw cr6,r10,r8
+	ctx.cr6.compare<uint32_t>(ctx.r10.u32, ctx.r8.u32, ctx.xer);
+	// ble cr6,0x8236171c
+	if (!ctx.cr6.gt) goto loc_8236171C;
+	// mr r8,r10
+	ctx.r8.u64 = ctx.r10.u64;
+loc_8236171C:
+	// lwz r11,4(r11)
+	ctx.r11.u64 = REX_LOAD_U32(ctx.r11.u32 + 4);
+loc_82361720:
+	// cmplwi cr6,r11,0
+	ctx.cr6.compare<uint32_t>(ctx.r11.u32, 0, ctx.xer);
+	// bne cr6,0x82361704
+	if (!ctx.cr6.eq) goto loc_82361704;
+	// lwz r10,32(r9)
+	ctx.r10.u64 = REX_LOAD_U32(ctx.r9.u32 + 32);
+	// b 0x8236174c
+	goto loc_8236174C;
+loc_82361730:
+	// lwz r9,0(r10)
+	ctx.r9.u64 = REX_LOAD_U32(ctx.r10.u32 + 0);
+	// lwz r9,0(r9)
+	ctx.r9.u64 = REX_LOAD_U32(ctx.r9.u32 + 0);
+	// rlwinm r9,r9,19,16,31
+	ctx.r9.u64 = __builtin_rotateleft64(ctx.r9.u32 | (ctx.r9.u64 << 32), 19) & 0xFFFF;
+	// cmplw cr6,r9,r11
+	ctx.cr6.compare<uint32_t>(ctx.r9.u32, ctx.r11.u32, ctx.xer);
+	// ble cr6,0x82361748
+	if (!ctx.cr6.gt) goto loc_82361748;
+	// mr r11,r9
+	ctx.r11.u64 = ctx.r9.u64;
+loc_82361748:
+	// lwz r10,4(r10)
+	ctx.r10.u64 = REX_LOAD_U32(ctx.r10.u32 + 4);
+loc_8236174C:
+	// cmplwi cr6,r10,0
+	ctx.cr6.compare<uint32_t>(ctx.r10.u32, 0, ctx.xer);
+	// bne cr6,0x82361730
+	if (!ctx.cr6.eq) goto loc_82361730;
+	// cmplw cr6,r8,r11
+	ctx.cr6.compare<uint32_t>(ctx.r8.u32, ctx.r11.u32, ctx.xer);
+	// bne cr6,0x82361764
+	if (!ctx.cr6.eq) goto loc_82361764;
+	// li r3,0
+	ctx.r3.s64 = 0;
+	// blr 
+	return;
+loc_82361764:
 	// subfc r11,r8,r11
 	ctx.xer.ca = ctx.r11.u32 >= ctx.r8.u32;
 	ctx.r11.u64 = ctx.r11.u64 - ctx.r8.u64;

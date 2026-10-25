@@ -42615,6 +42615,13 @@ loc_8232BBFC:
 	goto loc_8232BBF4;
 }
 
+DEFINE_REX_FUNC(sub_8232BC08) {
+	REX_FUNC_PROLOGUE();
+	// b 0x8232ba28
+	sub_8232BA28(ctx, base);
+	return;
+}
+
 DEFINE_REX_FUNC(sub_8232BC10) {
 	REX_FUNC_PROLOGUE();
 	uint32_t ea{};
