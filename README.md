@@ -7,8 +7,8 @@ your console's storage).
 
 ## Download
 Get the latest `AfterBurnerClimax-<version>-win64.zip` from [Releases](https://github.com/darkuni/afterburner-climax-recomp/releases),
-unzip it, drag your package file onto `extract-package.bat` (needs [Python 3](https://www.python.org/downloads/)) and run
-`after_burner_climax.exe`. Requirements: 64-bit Windows 10/11 and the
+unzip it, put your package file in the same folder and run `after_burner_climax.exe`: the first start makes the
+`assets` folder from it. Nothing else to install. Requirements: 64-bit Windows 10/11 and the
 [Microsoft Visual C++ Redistributable 2015-2022 (x64)](https://aka.ms/vs/17/release/vc_redist.x64.exe).
 
 ## Building
