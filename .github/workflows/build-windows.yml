@@ -145,7 +145,8 @@ jobs:
 
           Setup
             Put your package file in this folder and run after_burner_climax.exe. On the first start it
-            makes the "assets" folder from it; after that the package isn't needed any more.
+            makes the "assets" folder from it; after that the package isn't needed any more. The package can be
+            the file on its own or the whole folder copied from the console (58410A06\000D0000\...).
             (Already extracted? Put default.xex, the media folder, etc. in an "assets" folder instead.)
             If Windows says a DLL (e.g. VCRUNTIME140.dll) is missing, install the Microsoft Visual C++
             Redistributable 2015-2022 (x64): https://aka.ms/vs/17/release/vc_redist.x64.exe

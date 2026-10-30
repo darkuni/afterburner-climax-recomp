@@ -4,6 +4,7 @@
 
 #include <algorithm>
 #include <cstdio>
+#include <cstdlib>
 #include <cstring>
 #include <map>
 #include <system_error>
@@ -56,7 +57,7 @@ struct Stfs {
   FILE* f = nullptr;
   uint64_t file_size = 0;
   uint8_t hdr[0x1800] = {0};
-  uint32_t header_size = 0, title_id = 0, ft_block_count = 0, ft_block_num = 0, sex = 0;
+  uint32_t header_size = 0, title_id = 0, content_type = 0, ft_block_count = 0, ft_block_num = 0, sex = 0;
   uint32_t step0 = 0;
   uint64_t first_ht = 0;
   int bad_hashes = 0;
@@ -72,6 +73,7 @@ struct Stfs {
     file_size = tell();
     header_size = be32(hdr + 0x340);
     title_id = be32(hdr + 0x360);
+    content_type = be32(hdr + 0x344);
     const uint8_t* vd = hdr + 0x379;
     uint8_t block_sep = vd[2];
     ft_block_count = vd[3] | vd[4] << 8;
@@ -207,11 +209,20 @@ bool package_extract(const fs::path& package, const fs::path& out, std::string& 
 
 int package_setup_auto(const fs::path& exe_dir, const fs::path& assets, uint32_t title_id, std::string& err, std::string& used) {
   std::error_code ec;
+  // The package is usually copied as the console stores it (58410A06\000D0000\<hash>, no extension),
+  // so look in the exe folder and a few levels below it, skipping the assets folder itself.
   std::vector<fs::path> cands;
-  for (auto& e : fs::directory_iterator(exe_dir, ec)) {
+  auto it = fs::recursive_directory_iterator(exe_dir, fs::directory_options::skip_permission_denied, ec);
+  for (; !ec && it != fs::recursive_directory_iterator(); it.increment(ec)) {
+    const auto& e = *it;
+    if (e.is_directory(ec)) {
+      if (it.depth() >= 3 || e.path() == assets) it.disable_recursion_pending();
+      continue;
+    }
     if (!e.is_regular_file(ec) || e.file_size(ec) < 0x2000) continue;
     Stfs s;
-    if (s.open(e.path()) && s.title_id == title_id) cands.push_back(e.path());
+    // 0x000D0000 = Xbox Live Arcade title (not add-ons / marketplace items of the same game)
+    if (s.open(e.path()) && s.title_id == title_id && s.content_type == 0x000D0000) cands.push_back(e.path());
   }
   if (cands.empty()) return 0;
   std::sort(cands.begin(), cands.end());
@@ -225,8 +236,14 @@ int package_setup_auto(const fs::path& exe_dir, const fs::path& assets, uint32_t
 
 #ifdef PACKAGE_SETUP_TOOL
 int main(int argc, char** argv) {
-  if (argc < 3) { fprintf(stderr, "usage: %s <package> <outdir>\n", argv[0]); return 2; }
+  if (argc < 3) { fprintf(stderr, "usage: %s <package> <outdir> | --auto <exe_dir> <assets> <title_id_hex>\n", argv[0]); return 2; }
   std::string err;
+  if (std::string(argv[1]) == "--auto" && argc >= 5) {
+    std::string used;
+    int r = package_setup_auto(argv[2], argv[3], (uint32_t)strtoul(argv[4], nullptr, 16), err, used);
+    fprintf(stderr, "auto: %d used '%s' err '%s'\n", r, used.c_str(), err.c_str());
+    return r > 0 ? 0 : 1;
+  }
   int bad = 0;
   if (!package_extract(argv[1], argv[2], err, &bad)) { fprintf(stderr, "failed: %s\n", err.c_str()); return 1; }
   fprintf(stderr, "ok, %d bad block hashes\n", bad);
