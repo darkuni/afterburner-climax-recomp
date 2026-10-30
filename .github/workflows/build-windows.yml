@@ -15,10 +15,9 @@ permissions:
 
 env:
   REXGLUE_SDK_REF: v0.9.0
-  # Prebuilt package from darkuni/rexglue-sdk-builds: v0.9.0 + XMA stream start/end
-  # skip honoured, as the console's XMA hardware does (fixed OutRun's looping-sound
-  # clicks). Stock v0.9.0 also sounded right for this game; p5 keeps it on the fix.
-  REXGLUE_SDK_PKG: v0.9.0-p5
+  # Prebuilt package from darkuni/rexglue-sdk-builds: the same patch level as OutRun
+  # (p23: XMA start/end skip honoured, hardware-like XMA start latency, ...).
+  REXGLUE_SDK_PKG: v0.9.0-p23
 
 jobs:
   build:
@@ -148,7 +147,8 @@ jobs:
             1. Install Python 3 from python.org (tick "Add python.exe to PATH").
             2. Drag your package file onto extract-package.bat. It creates the "assets" folder.
                (Already extracted? Copy default.xex, the media folder, etc. into "assets" instead.)
-            3. Run after_burner_climax.exe.
+            3. Run after_burner_climax.exe. If Windows says a DLL (e.g. VCRUNTIME140.dll) is missing,
+               install the Microsoft Visual C++ Redistributable 2015-2022 (x64): https://aka.ms/vs/17/release/vc_redist.x64.exe
 
           F1 / Esc: settings (display mode, resolution, VSync, aspect, filtering, audio, keys). F11: fullscreen.
           F3: performance overlay. Settings are saved in after_burner_climax.toml.

@@ -8,7 +8,8 @@ your console's storage).
 ## Download
 Get the latest `AfterBurnerClimax-<version>-win64.zip` from [Releases](https://github.com/darkuni/afterburner-climax-recomp/releases),
 unzip it, drag your package file onto `extract-package.bat` (needs [Python 3](https://www.python.org/downloads/)) and run
-`after_burner_climax.exe`. Requirements: 64-bit Windows 10/11.
+`after_burner_climax.exe`. Requirements: 64-bit Windows 10/11 and the
+[Microsoft Visual C++ Redistributable 2015-2022 (x64)](https://aka.ms/vs/17/release/vc_redist.x64.exe).
 
 ## Building
 GitHub Actions builds on every push to `main` (or run **Build Windows** by hand from the Actions tab); publishing a
@@ -46,7 +47,7 @@ Same menu as the Poker Smash / ReBirth recomps: display mode (also F11), window 
 | `src/after_burner_climax_app.h` | App class - game folder default, Xenos GPU plugin, full-game license, first-launch defaults, menu/F11 binds |
 | `src/game_menu.*`, `src/game_keys.h` | F1/Esc settings menu and this game's key layout |
 | `tools/` | Package/XEX extraction (STFS, XEX2 basic + LZX), pointer-function scan, label check |
-| `.github/workflows/build-windows.yml` | CI: LLVM + prebuilt SDK (darkuni/rexglue-sdk-builds, v0.9.0-p5) + game; uploads the package, attaches it to releases |
+| `.github/workflows/build-windows.yml` | CI: LLVM + prebuilt SDK (darkuni/rexglue-sdk-builds, v0.9.0-p23) + game; uploads the package, attaches it to releases |
 
 ## Codegen fixes so far
 - `0x824A7C68`, `0x824D9DD8`, `0x82441BA8`, `0x824D92B0`: small thunks reached only by `b` from other functions.
