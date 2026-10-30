@@ -1,9 +1,17 @@
 name: Build Windows
 
+# Every push to main builds the package (download it from the run's "Artifacts").
+# Publishing a GitHub Release (or pushing a v* tag) also attaches the zip to that release.
 on:
   push:
     branches: [main]
+    tags: ['v*']
+  release:
+    types: [published]
   workflow_dispatch:
+
+permissions:
+  contents: write
 
 env:
   REXGLUE_SDK_REF: v0.9.0
@@ -131,13 +139,33 @@ jobs:
             Where-Object { -not (Test-Path ("dist\" + $_.Name)) } | Copy-Item -Destination dist\
           @"
           After Burner Climax - native Windows build (ReXGlue static recompilation)
+          https://github.com/darkuni/afterburner-climax-recomp
 
-          Game files are NOT included. Copy the contents of your extracted
-          After Burner Climax package (default.xex, the media folder, etc.)
-          into a folder named "assets" next to after_burner_climax.exe,
-          then run after_burner_climax.exe. (Or point at another folder with
-          --game_data_root=C:\path\to\files)
+          Game files are NOT included. You need your own After Burner Climax XBLA package
+          (the Xbox 360 LIVE file from your console's storage).
+
+          Setup (once)
+            1. Install Python 3 from python.org (tick "Add python.exe to PATH").
+            2. Drag your package file onto extract-package.bat. It creates the "assets" folder.
+               (Already extracted? Copy default.xex, the media folder, etc. into "assets" instead.)
+            3. Run after_burner_climax.exe.
+
+          F1 / Esc: settings (display mode, resolution, VSync, aspect, filtering, audio, keys). F11: fullscreen.
+          F3: performance overlay. Settings are saved in after_burner_climax.toml.
+          Controls: left stick / arrows = fly, A / Z = machine gun, B / X = missiles, LB RB / C V = Climax,
+          LT RT / A S = brake / accelerate, Start / Enter, Back / Backspace.
+
+          Unofficial fan project, not affiliated with or endorsed by SEGA or Microsoft. The exe contains code
+          machine-translated from the game's executable; game data comes from your own package.
+          ReXGlue SDK: BSD-3-Clause (portions from Xenia) - see licenses\.
           "@ | Out-File dist\README.txt -Encoding utf8
+          Copy-Item dist-files\extract-package.bat dist\
+          New-Item -ItemType Directory -Force dist\tools, dist\licenses | Out-Null
+          Copy-Item tools\stfs_extract.py dist\tools\
+          Copy-Item LICENSE dist\licenses\after-burner-climax-recomp-LICENSE.txt
+          if (Test-Path "$env:GITHUB_WORKSPACE\rexglue-sdk-install\share\licenses") {
+            Copy-Item -Recurse "$env:GITHUB_WORKSPACE\rexglue-sdk-install\share\licenses\*" dist\licenses\
+          }
           Get-ChildItem dist
 
       - name: Upload build
@@ -145,3 +173,20 @@ jobs:
         with:
           name: after_burner_climax-win-amd64
           path: dist/
+
+      - name: Zip for release
+        if: startsWith(github.ref, 'refs/tags/v')
+        shell: pwsh
+        run: |
+          $zip = "AfterBurnerClimax-$env:GITHUB_REF_NAME-win64.zip"
+          New-Item -ItemType Directory -Force pkg\AfterBurnerClimax | Out-Null
+          Copy-Item -Recurse dist\* pkg\AfterBurnerClimax\
+          Compress-Archive -Path pkg\AfterBurnerClimax -DestinationPath $zip
+          "ZIP=$zip" | Out-File -FilePath $env:GITHUB_ENV -Append
+
+      - name: Release
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: ${{ env.ZIP }}
+          generate_release_notes: true

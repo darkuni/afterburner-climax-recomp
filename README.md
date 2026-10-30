@@ -1,11 +1,19 @@
-# After Burner Climax Recompiled (private)
+# After Burner Climax Recompiled
 
 Static recompilation of **After Burner Climax** (Xbox 360 XBLA, SEGA AM2, 2010; Title ID 58410A06, default.xex 1.0.0.0 built 2009-12-21) to native Windows, using the [ReXGlue SDK](https://github.com/rexglue/rexglue-sdk) v0.9.0.
 
-**Private repo.** `generated/` is the game's own PowerPC code machine-translated to C++. No game data is committed - you supply your own dump.
+**No game data is included.** You need your own After Burner Climax XBLA package (the Xbox 360 LIVE file from
+your console's storage).
 
-## Getting a build
-GitHub Actions builds on every push to `main` (or run **Build Windows** by hand from the Actions tab). Download the artifact from the run, unzip it, and put your extracted game files in an `assets` folder next to the exe:
+## Download
+Get the latest `AfterBurnerClimax-<version>-win64.zip` from [Releases](https://github.com/darkuni/afterburner-climax-recomp/releases),
+unzip it, drag your package file onto `extract-package.bat` (needs [Python 3](https://www.python.org/downloads/)) and run
+`after_burner_climax.exe`. Requirements: 64-bit Windows 10/11.
+
+## Building
+GitHub Actions builds on every push to `main` (or run **Build Windows** by hand from the Actions tab); publishing a
+release attaches the zip to it. Unzip a build and put your extracted game files in an `assets` folder next to the exe
+(`tools/stfs_extract.py <package> assets` extracts the package):
 
 ```
 after_burner_climax.exe
@@ -38,10 +46,14 @@ Same menu as the Poker Smash / ReBirth recomps: display mode (also F11), window 
 | `src/after_burner_climax_app.h` | App class - game folder default, Xenos GPU plugin, full-game license, first-launch defaults, menu/F11 binds |
 | `src/game_menu.*`, `src/game_keys.h` | F1/Esc settings menu and this game's key layout |
 | `tools/` | Package/XEX extraction (STFS, XEX2 basic + LZX), pointer-function scan, label check |
-| `.github/workflows/build-windows.yml` | CI: LLVM + SDK (cached) + game, uploads exe + DLLs |
+| `.github/workflows/build-windows.yml` | CI: LLVM + prebuilt SDK (darkuni/rexglue-sdk-builds, v0.9.0-p5) + game; uploads the package, attaches it to releases |
 
 ## Codegen fixes so far
 - `0x824A7C68`, `0x824D9DD8`, `0x82441BA8`, `0x824D92B0`: small thunks reached only by `b` from other functions.
 - 58 functions reachable only through vtables/callbacks (`tools/scan_pointer_funcs.py`).
 
-Not affiliated with or endorsed by SEGA or Microsoft.
+## Disclaimer
+Unofficial fan project, not affiliated with or endorsed by SEGA or Microsoft. This repository and its releases contain
+no game data (graphics, sound, levels): those come from your own package. `generated/` and the release exe contain code
+machine-translated from the game's executable. The project's own code is under the [MIT License](LICENSE); the ReXGlue
+SDK is BSD-3-Clause (portions derived from Xenia), and its licenses ship in the release zip.
